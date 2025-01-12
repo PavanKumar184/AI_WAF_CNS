@@ -5,3 +5,4 @@ Machine learning driven web application firewall to detect malicious queries wit
 
 Link:
 http://fsecurify.com/fwaf-machine-learning-driven-web-application-firewall/
+# AI_WAF_CNS

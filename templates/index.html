@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application firewall</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Application Firewall</h1>
+    <form method="POST" action="/predict">
+        <label for="query">Enter your URL:</label>
+        <input type="text" id="query" name="query" placeholder="Type your url here..." required>
+        <button type="submit">Classify</button>
+    </form>
+
+    {% if query %}
+    <div class="result">
+        <p>URL: {{ query }}</p>
+        <p>Result: {{ result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
